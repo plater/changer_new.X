@@ -53,3 +53,21 @@ dkms.conf
 
 # debug information files
 *.dwo
+/nbproject/private/SuppressibleMessageMemo.properties
+/Makefile
+/nbproject/configurations.xml
+/nbproject/project.xml
+/nbproject/Makefile-impl.mk
+/nbproject/private/configurations.xml
+/nbproject/private/private.xml
+/nbproject/Makefile-genesis.properties
+/mcc-manifest-generated-success.yml
+/queuelogs/debugtool.txt
+/defmplabxtrace.log
+/mcc-manifest-autosave.yml
+/nbproject/Makefile-default.mk
+/nbproject/Makefile-local-default.mk
+/nbproject/Makefile-variables.mk
+/defmplabxtrace.log.inx
+/changer_new.mc3.bak
+/nbproject/Package-default.bash

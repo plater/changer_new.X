@@ -124,10 +124,6 @@ void dispense_r2(void)
 	}
 	numbs = credit / 2;
 	payed = credit % 2;
-    if(payed = 1)
-    {
-        pay_r1(payed);
-    }
 	if(numbs > 5)
 	{
 		numbs = 5;
