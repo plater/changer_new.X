@@ -110,7 +110,7 @@ void main(void)
 				NOTEEN;
 				lcd_scroll_string(msgbuf);
 			}
-			if(!SERVICE)
+/*			if(!SERVICE)
 			{
 				credit = retrieve_credit();
 				credit = credit + 5;
@@ -120,7 +120,7 @@ void main(void)
 			{
 				CLRWDT();
 				
-			}
+			}*/
 		}
     }
 }
