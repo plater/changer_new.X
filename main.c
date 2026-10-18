@@ -91,7 +91,7 @@ void main(void)
 		}
 		if(credit >= 10)
 		{
-			NOTEDS;
+			NOTEDS();
 		}
 		if(PIR4bits.TMR5IF) //500 mSec
 		{
@@ -107,7 +107,7 @@ void main(void)
 			}
 			else
 			{
-				NOTEEN;
+				NOTEEN();
 				lcd_scroll_string(msgbuf);
 			}
 /*			if(!SERVICE)

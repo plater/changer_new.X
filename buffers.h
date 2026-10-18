@@ -47,8 +47,8 @@ enum { 	PAY_OK = 0,
 #define BUTR2   	PORTCbits.RC5
 #define BUTR5   	PORTCbits.RC4
 #define SERVICE 	PORTAbits.RA0
-#define NOTEEN		NOTEEN_SetLow() // Bill validator enable
-#define NOTEDS		NOTEEN_SetHigh() // Bill validator disable
+#define NOTEEN()	do{NOTEEN0_SetLow();NOTEEN1_SetLow();}while(0) // Bill validator enable
+#define NOTEDS()	do{NOTEEN0_SetHigh();NOTEEN1_SetHigh();}while(0) // Bill validator disable
 
 #define R10IN   !(NOTE_GetValue())
 #define R01IN	!(COIN_GetValue())

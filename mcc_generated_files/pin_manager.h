@@ -345,25 +345,25 @@
 #define COIN_SetAnalogMode()      do { ANSELBbits.ANSELB5 = 1; } while(0)
 #define COIN_SetDigitalMode()     do { ANSELBbits.ANSELB5 = 0; } while(0)
 
-// get/set NOTEEN aliases
-#define NOTEEN_TRIS                 TRISCbits.TRISC3
-#define NOTEEN_LAT                  LATCbits.LATC3
-#define NOTEEN_PORT                 PORTCbits.RC3
-#define NOTEEN_WPU                  WPUCbits.WPUC3
-#define NOTEEN_OD                   ODCONCbits.ODCC3
-#define NOTEEN_ANS                  ANSELCbits.ANSELC3
-#define NOTEEN_SetHigh()            do { LATCbits.LATC3 = 1; } while(0)
-#define NOTEEN_SetLow()             do { LATCbits.LATC3 = 0; } while(0)
-#define NOTEEN_Toggle()             do { LATCbits.LATC3 = ~LATCbits.LATC3; } while(0)
-#define NOTEEN_GetValue()           PORTCbits.RC3
-#define NOTEEN_SetDigitalInput()    do { TRISCbits.TRISC3 = 1; } while(0)
-#define NOTEEN_SetDigitalOutput()   do { TRISCbits.TRISC3 = 0; } while(0)
-#define NOTEEN_SetPullup()          do { WPUCbits.WPUC3 = 1; } while(0)
-#define NOTEEN_ResetPullup()        do { WPUCbits.WPUC3 = 0; } while(0)
-#define NOTEEN_SetPushPull()        do { ODCONCbits.ODCC3 = 0; } while(0)
-#define NOTEEN_SetOpenDrain()       do { ODCONCbits.ODCC3 = 1; } while(0)
-#define NOTEEN_SetAnalogMode()      do { ANSELCbits.ANSELC3 = 1; } while(0)
-#define NOTEEN_SetDigitalMode()     do { ANSELCbits.ANSELC3 = 0; } while(0)
+// get/set NOTEEN1 aliases
+#define NOTEEN1_TRIS                 TRISCbits.TRISC3
+#define NOTEEN1_LAT                  LATCbits.LATC3
+#define NOTEEN1_PORT                 PORTCbits.RC3
+#define NOTEEN1_WPU                  WPUCbits.WPUC3
+#define NOTEEN1_OD                   ODCONCbits.ODCC3
+#define NOTEEN1_ANS                  ANSELCbits.ANSELC3
+#define NOTEEN1_SetHigh()            do { LATCbits.LATC3 = 1; } while(0)
+#define NOTEEN1_SetLow()             do { LATCbits.LATC3 = 0; } while(0)
+#define NOTEEN1_Toggle()             do { LATCbits.LATC3 = ~LATCbits.LATC3; } while(0)
+#define NOTEEN1_GetValue()           PORTCbits.RC3
+#define NOTEEN1_SetDigitalInput()    do { TRISCbits.TRISC3 = 1; } while(0)
+#define NOTEEN1_SetDigitalOutput()   do { TRISCbits.TRISC3 = 0; } while(0)
+#define NOTEEN1_SetPullup()          do { WPUCbits.WPUC3 = 1; } while(0)
+#define NOTEEN1_ResetPullup()        do { WPUCbits.WPUC3 = 0; } while(0)
+#define NOTEEN1_SetPushPull()        do { ODCONCbits.ODCC3 = 0; } while(0)
+#define NOTEEN1_SetOpenDrain()       do { ODCONCbits.ODCC3 = 1; } while(0)
+#define NOTEEN1_SetAnalogMode()      do { ANSELCbits.ANSELC3 = 1; } while(0)
+#define NOTEEN1_SetDigitalMode()     do { ANSELCbits.ANSELC3 = 0; } while(0)
 
 // get/set R5BUT aliases
 #define R5BUT_TRIS                 TRISCbits.TRISC4

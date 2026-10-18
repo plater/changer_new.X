@@ -282,10 +282,10 @@ void tens_in(void)
 	uint32_t elapsed = 0;
 	startof:
 	dly_msec(5);//Wait for 5mS debounce
-	if(!R10IN)
+	if(R10IN)
 	{
 		dly_msec(1);
-		if(R10IN)
+		if(!R10IN)
 		{
 			goto endof; //Noise? pulse is less than 5mS
 		}
@@ -295,7 +295,7 @@ void tens_in(void)
 	credit = retrieve_credit();
 	credit = credit + 10;
 	store_credit(credit);
-	while(!R10IN)
+	while(R10IN)
 	{
 		CLRWDT();
 		
@@ -305,7 +305,7 @@ void tens_in(void)
     TMR3_StartTimer();
 	while(!PIR4bits.TMR3IF)//wait for next pulse
 	{
-		if(!R10IN)
+		if(R10IN)
 		{
 			goto startof;
 		}
@@ -317,10 +317,10 @@ void ones_in(void)
 		uint32_t elapsed =  0;
 		startof:;
 		dly_msec(5);//Wait for 5mS debounce
-		if(!R01IN)
+		if(R01IN)
 		{
 			dly_msec(1);
-			if(R01IN)
+			if(!R01IN)
 			{
 				goto endof; //Noise? pulse is less than 6mS
 			}
@@ -331,14 +331,14 @@ void ones_in(void)
 		store_credit(credit);
 		TMR3_Initialize();
         TMR3_StartTimer();
-		while(!R01IN)
+		while(R01IN)
 		{
             CLRWDT();
 		}
 	endof:;
 	while(!PIR4bits.TMR3IF)//wait for next pulse for 300mS
 	{
-		if(!R01IN)
+		if(R01IN)
 		{
 			goto startof;
 		}
@@ -418,7 +418,7 @@ void process_credit(void)
 			shcred = 0;
 			goto error;
 		}
-		NOTEDS;
+		NOTEDS();
 		lcd_write_string("R2 button press");
 		dly_msec(100);
 		if(credit >= 2)
@@ -438,7 +438,7 @@ void process_credit(void)
 	}
 	if(credit >= 5)
 	{
-		NOTEDS;
+		NOTEDS();
 		if(!BUTR5)
 		{
 			if(errorflg >= 5)

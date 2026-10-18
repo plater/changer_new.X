@@ -54,8 +54,8 @@
 #include <conio.h>
 #include "tmr5.h"
 #include "tmr3.h"
-#include "memory.h"
 #include "tmr1.h"
+#include "memory.h"
 #include "tmr0.h"
 
 #define WDTCWS  7
